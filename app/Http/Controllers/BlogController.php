@@ -58,7 +58,8 @@ class BlogController extends Controller
      */
     public function edit(Blog $blog)
     {
-        
+        return $blog->image->size;
+        dd($blog->image);
         return view('blog.edit', compact('blog'));
     }
 
